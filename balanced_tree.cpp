@@ -1,8 +1,7 @@
 /*
-Minimum Depth of Binary Tree
-Given a binary tree, find its minimum depth.
+Given a binary tree, determine if it is height-balanced.
 
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
 */
 #include <iostream>
 #include <queue>
