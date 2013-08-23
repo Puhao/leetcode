@@ -1,8 +1,7 @@
 /*
-Minimum Depth of Binary Tree
-Given a binary tree, find its minimum depth.
+Given two binary trees, write a function to check if they are equal or not.
 
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
 */
 #include <iostream>
 #include <queue>
