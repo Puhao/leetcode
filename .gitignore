@@ -8,3 +8,5 @@ min_depth
 tree_same
 
 word_ladder
+
+balanced_tree
