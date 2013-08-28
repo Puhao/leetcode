@@ -17,4 +17,7 @@ LeetCode
 
 ##Same Tree
 递归比较下就可以了
+
+##Two Sum
+做个排序，然后从两头开始加，找到合适的两个数，算法复杂度O(nlogn)，或者使用hash，查找item，target-item, 这样算法复杂度O(n)
  
