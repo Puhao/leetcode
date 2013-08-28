@@ -80,10 +80,12 @@ vector<vector<string> > findLadders(string start, string end, set<string> &dict)
 
 	queue<string>	LadQue;
 	queue<string>	DelQue;
+	set<string> RoundSet;	//确保每轮queue入队的元素没有重复的
+
 	LadQue.push(start);
 	//有一个小陷阱，如果开始的元素已经在dict里面，在变化检索的时候会产生重复元素
-	if(dict.count(start))
-		dict.erase(start);
+	//if(dict.count(start))
+	//	dict.erase(start);
 	bool FindEnd = false;
 	while(!LadQue.empty())
 	{
@@ -94,7 +96,7 @@ vector<vector<string> > findLadders(string start, string end, set<string> &dict)
 			string PreWord = check;
 			for(int i=0; i<check.size(); i++)
 			{
-				char tmp = check[i];	//每次bianh
+				char tmp = check[i];	//每次变化一位
 				for(char j='a'; j<='z'; j++)
 				{
 					check[i] = j;
@@ -105,8 +107,12 @@ vector<vector<string> > findLadders(string start, string end, set<string> &dict)
 					}
 					else if (dict.count(check))	//if the string is in dict
 					{
-						DelQue.push(check);		//这个深度的全部检查完之后，才能从dict中删除
-						LadQue.push(check);
+						if (!RoundSet.count(check))
+						{
+							RoundSet.insert(check);
+							DelQue.push(check);		//这个深度的全部检查完之后，才能从dict中删除
+							LadQue.push(check);
+						}
 						LadPre[check].push_back(PreWord);
 					}
 				}
@@ -114,6 +120,7 @@ vector<vector<string> > findLadders(string start, string end, set<string> &dict)
 			}
 			LadQue.pop();	//单词检查完毕,出队
 		}
+		RoundSet.clear();
 
 		if (FindEnd)	//在这个深度的时候找到了最终跳转结果
 		{
