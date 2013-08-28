@@ -29,6 +29,7 @@ All words contain only lowercase alphabetic characters.
 #include <map>
 using namespace std;
 
+//查看每个单词的前序序列
 void PrintPreList(map<string,vector<string> > &LadPre)
 {
 	map<string,vector<string> >::const_iterator  it;
@@ -45,7 +46,7 @@ void PrintPreList(map<string,vector<string> > &LadPre)
 	return;
 }
 
-
+//根据前序序列，通过DFS找到所有路径
 void FindPath(map<string,vector<string> > &LadPre, vector<vector<string> > &LadRoad,string start,string end,vector<string> &OneRoad)
 {
 	if (start == end)
@@ -68,6 +69,7 @@ void FindPath(map<string,vector<string> > &LadPre, vector<vector<string> > &LadR
 	return;
 }
 
+//BFS查找最少变化路径
 vector<vector<string> > findLadders(string start, string end, set<string> &dict) 
 {
         // Start typing your C/C++ solution below
@@ -124,7 +126,7 @@ vector<vector<string> > findLadders(string start, string end, set<string> &dict)
 
 		if (FindEnd)	//在这个深度的时候找到了最终跳转结果
 		{
-			PrintPreList(LadPre);
+			//PrintPreList(LadPre);
 			FindPath(LadPre,LadRoad,start,end,OneRoad);
 			return LadRoad;
 		}
