@@ -18,6 +18,19 @@ LeetCode
 ##Same Tree
 递归比较下就可以了
 
+#Palindrome Number
+从reverse integer提示，比较两头数值
+
+#String to Integer (atoi)
+考虑各种情形
+
+#Reverse Integer
+就是把输入的数的个位依次变成另外一个数的高位
+
+
+#ZigZag Conversion
+创建一个nRows的vector<vector <int> >，然后按照题目意思，一个个把char放进对应的vector，最后把nRows个vector依次组成string返回
+
 #Longest Palindromic Substring
 函数f(n)表示到第n个位置最长的回文字符，则f(n+1)就是从n+1个位置开始往前最长的回文与f(n)的回文长度更大的那个回文字符
 
