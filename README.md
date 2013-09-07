@@ -18,29 +18,41 @@ LeetCode
 ##Same Tree
 递归比较下就可以了
 
-#Palindrome Number
+##Roman to Integer
+根据罗马数字规则，进行转换.
+
+##Integer to Roman
+[Roman数字](http://zh.wikipedia.org/wiki/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97)写法。
+
+##Container With Most Water
+头尾指针移动,数学归纳证明和排序好的数组找两个值相加为某个定值是一样的。
+
+##Regular Expression Matching
+递归比较
+
+##Palindrome Number
 从reverse integer提示，比较两头数值
 
-#String to Integer (atoi)
+##String to Integer (atoi)
 考虑各种情形
 
-#Reverse Integer
+##Reverse Integer
 就是把输入的数的个位依次变成另外一个数的高位
 
 
-#ZigZag Conversion
+##ZigZag Conversion
 创建一个nRows的vector<vector <int> >，然后按照题目意思，一个个把char放进对应的vector，最后把nRows个vector依次组成string返回
 
-#Longest Palindromic Substring
+##Longest Palindromic Substring
 函数f(n)表示到第n个位置最长的回文字符，则f(n+1)就是从n+1个位置开始往前最长的回文与f(n)的回文长度更大的那个回文字符
 
-#Add Two Numbers
+##Add Two Numbers
 递归的增加，只是每次增加的时候带上进位
 
-#Longest Substring Without Repeating Characters
+##Longest Substring Without Repeating Characters
 设计函数f(n)，到第n个位置的最长子不重复子序列长度，则f(n+1)就是比较从n+1个位置开始往前数的最长不重复子序列和f(n)两者的较大值
 
-#Median of Two Sorted Arrays
+##Median of Two Sorted Arrays
 查找第K个数，因为已经排序好，查找算法相当于二分查找方法。
 
 ##Two Sum
