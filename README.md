@@ -15,8 +15,23 @@ LeetCode
 ##Balanced Binary Tree
 递归求解树的高度，为了解决重复计算子节点高度问题（一遍计算高度，一遍判断是否平衡），采用后续遍历树，这样计算高度和检查是否平衡可以同时进行。
 
+##Construct Binary Tree from Preorder and Inorder Traversal
+递推构造
+
 ##Same Tree
 递归比较下就可以了
+
+##4Sum
+可以两两一组，然后hash来做，降低复杂度到O(n<sup>2</sup>)
+
+##3Sum Closest
+轮询每个数，记住最小差，退化为2Sum问题
+
+##3Sum
+轮询每个数字，退化为2Sum问题
+
+##Longest Common Prefix
+把握细节
 
 ##Roman to Integer
 根据罗马数字规则，进行转换.
@@ -58,3 +73,6 @@ LeetCode
 ##Two Sum
 做个排序，然后从两头开始加，找到合适的两个数，算法复杂度O(nlogn)，或者使用hash，查找item，target-item, 这样算法复杂度O(n)
  
+
+
+
