@@ -15,11 +15,26 @@ LeetCode
 ##Balanced Binary Tree
 递归求解树的高度，为了解决重复计算子节点高度问题（一遍计算高度，一遍判断是否平衡），采用后续遍历树，这样计算高度和检查是否平衡可以同时进行。
 
+##Construct Binary Tree from Inorder and Postorder Traversal
+递归构造
+
 ##Construct Binary Tree from Preorder and Inorder Traversal
 递推构造
 
 ##Same Tree
 递归比较下就可以了
+
+##Generate Parentheses
+DFS产生所有的组合
+
+##Valid Parentheses
+用一个stack记录元素，然后配对出栈，不然就是不符合的，最后检查栈为空
+
+##Remove Nth Node From End of List
+两个指针，一个先移动n步
+
+##Letter Combinations of a Phone Number
+DFS查找所有结果
 
 ##4Sum
 可以两两一组，然后hash来做，降低复杂度到O(n<sup>2</sup>)
