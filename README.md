@@ -24,6 +24,18 @@ LeetCode
 ##Same Tree
 递归比较下就可以了
 
+##Merge Two Sorted Lists
+递归合并
+
+##Reverse Nodes in k-Group
+通过一个reverse函数来实现k组的reverse
+
+##Swap Nodes in Pairs
+递归合并，题目要求只能常数空间的话，就使用while循环，记录一个pre指针。
+
+##Merge k Sorted Lists
+两两归并
+
 ##Generate Parentheses
 DFS产生所有的组合
 
