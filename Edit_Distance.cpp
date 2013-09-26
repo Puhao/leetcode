@@ -7,13 +7,25 @@ int minDistance(string word1, string word2) {
         // DO NOT write int main() function
 	int l1 = word1.size();
 	int l2 = word2.size();
-	int Ret[1000][1000];
+	int Ret[l1+1][l2+1];
 	memset(Ret,-1,sizeof(Ret)/sizeof(Ret[0][0]));
 	for(int i=0;i<l1+1;i++)
-		Ret[i][l2] = l1 -i;
+		Ret[i][0] = i;
 	for(int j=0;j<l2+1;j++)
-		Ret[l1][j] = l2 -j;
-	return dst(word1,0,word2,0,Ret);
+		Ret[0][j] = j;
+	for(int i=1;i<=word1.size();i++)
+	{
+		for(int j=1;j<=word2.size();j++)
+		{
+			if (word1[word1.size()-i] == word2[word2.size()-j])
+				Ret[i][j] = Ret[i-1][j-1];
+			else
+			{
+				Ret[i][j] = min(min(Ret[i][j-1],Ret[i-1][j]),Ret[i-1][j-1])+1;
+			}
+		}
+	}
+	return Ret[l1][l2];
         
 }
 
